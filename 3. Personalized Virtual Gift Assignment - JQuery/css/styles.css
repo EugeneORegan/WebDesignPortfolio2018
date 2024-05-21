@@ -1,0 +1,155 @@
+@font-face{
+    font-family: MerryChristmasStar;
+    src:url(MerryChristmasStar.ttf);
+ 
+}
+
+@font-face{
+    font-family: ChristmasTime;
+    src:url(ChristmasTime.ttf);
+ 
+}
+
+h2  {
+    font-family: "MerryChristmasStar", cursive;
+    font-size:250%;
+    text-align: center;
+    background-color: indianred;    
+}
+
+header {
+    border-style: outset;
+    background-color: indianred;
+    padding: 2px; 
+    
+}
+
+img#tree1,  img#tree2, img#tree3
+{
+    
+    display:none;
+}
+
+
+ legend  {
+    font-family: "MerryChristmasStar", cursive;
+    font-size:170%;
+ }
+
+div#buyerDetails{
+    background-image: url(../img/christmas-2919724.png);
+    background-repeat: no-repeat;
+    background-size: 450px 300px;
+    background-position: right;
+    
+}
+
+div#allPage{
+  
+  background-image: url(../img/HollyBough.JPG);
+    background-size: auto;
+  
+}
+
+#boogie{
+    display:none;
+    
+}
+
+div#wrapper{
+  max-width:960px;
+  background-color:white;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+footer{
+    max-width:960px;
+    max-height: 960px;
+ }
+
+footer img{
+    padding: 3px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+p#treeDetails
+{
+    display: none;
+}
+
+div#oldManGloom{
+    
+    display: none;
+    font-family: "ChristmasTime", cursive;
+    font-size:140%;
+    color: green;
+ 
+}
+p#amountPaid, p#senderField, p#receiverField, p#messageField, p#giftsField
+{
+    
+    margin-left: 80px;
+    color: red;
+}
+
+div#treeOne
+{   width: 50%;
+    float: left;
+    display: none;
+    background-image: url(../img/tree1.JPG);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: right;
+    border-style: inset;
+    border-color: crimson;
+    
+}
+
+div#treeTwo
+{   width: 50%;
+    float: left;
+    display: none;
+    background-image: url(../img/tree2.JPG);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: right;
+    border-style: inset;
+    border-color: crimson;
+    
+}
+
+div#treeThree
+{   width: 50%;
+    float: left;
+    display: none;
+    background-image: url(../img/tree3.JPG);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: right;
+    border-style: inset;
+    border-color: crimson;
+    
+}
+
+p#treeNameGiftOne
+{
+    margin-left: 80px;
+    color: red; 
+}
+
+p#treeNameGiftTwo
+{
+    margin-left: 80px;
+    color: red; 
+}
+
+p#treeNameGiftThree
+{
+    margin-left: 80px;
+    color: red; 
+}
+

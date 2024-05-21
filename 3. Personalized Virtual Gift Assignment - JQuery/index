@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Personalized Virtual Gifts</title>
+        <link href = "css/styles.css" rel = "stylesheet" type = "text/css" />
+        <script> type="text/javascript" src="code.js"</script>
+    </head>
+<header>
+    
+    
+</header>
+    
+ <body>
+   <h2>Buyer</h2>
+        
+
+            <form>
+                <div id = "buyer">
+                    <p><label for="firstName"> First Name:</label><input type="text"name="firstName" id="firstName" size="23" required></p>
+                    <p><label for="secondName"> Second Name:</label><input type="text" name="secondName" id="secondName" size="23" required></p>
+                    <p><label for="email"> Email Address:</label><input type="text" name="email" id="email" size="23" required></p>
+                    <p><label for="creditCardNumber"> Credit Card Number:</label><input type="text" name="creditCardNumber" id="creditCardNumber" size="23" required>
+                        <label for="amount"> Amount:</label><input type="text" name="amount" id="amount" size="23" required></p>
+                    hello();
+                    <p><label for="datePurchased"> Date Purchased:</label><input type="text" name="datePurchased" id="datePurchased" size="23" required></p>
+                    
+                    <p><input type="checkbox" name="sameName" value="sameName">Same as above<br></p>
+                    <p><label for="firstName2"> First Name:</label><input type="text" name="firstName2" id="firstName2" size="23" required></p>
+                    <p><label for="secondName2"> Second Name:</label><input type="text" name="secondName2" id="secondName2" size="23" required></p>
+                </div>
+                
+                <div id = "tree">
+                    <fieldset>
+                        <legend>Tree Details</legend>
+                        <p><label for="treeName"> Name of Tree:</label><input type="text" name="treeName" id="treeName" size="23" required></p>
+                        <p>
+                    <label>Tree Type :</label><br>
+                        <input type="radio" name = "treeType" value="A" > Type A<br>
+                        <input type="radio" name = "treeType" value = "B" checked = "checked"> Type B <br>
+                        <input type="radio" name = "treeType" value="C" > Type C<br>  
+                </p>
+                    </fieldset>
+                </div>
+            </form>
+    
+
+</body>
+</html>                  

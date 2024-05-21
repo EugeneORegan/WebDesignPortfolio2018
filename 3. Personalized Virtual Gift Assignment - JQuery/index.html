@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Personalized Virtual Gifts</title>
+        <link href = "css/styles.css" rel = "stylesheet" type = "text/css" />
+        <script src="js/code.js"></script> <!--- Link to .js file -->
+        <script src="js/jquery-3.2.1.min.js"> </script>
+    </head>
+<body>
+    <div id = "allPage">
+        
+    <div id = "wrapper">
+<header>
+    <h2 >The Holly Bough <br> Gift Section </h2>
+    
+    <p> Welcome again to <em> The Holly Bough</em>. This year, as well as providing local finance for local causes, we've teamed up with a few of Cork's more distinguished PRCer's , who are  showing their charitable side by assisting some of the causes. Depending on the amount donated, you will receive or be entered into a draw for the following :</p>
+    <ul>
+        <li> The Frank and Walters free download of their cover of  <em>"I saw Santa kissing Grandma"</em> (all donations €2 or over receive this).</li>
+        <li> That '80's Agony Aunt, Terence, coming to your local pub to cure all your ails (all donations €5 or over to be entered into a draw).  </li>
+        <li> A training session at the Southern San Siro, Turners Cross, with John Caulfield (all donations €15 or over to be entered into a draw). </li>
+        <li> A training session with Derval O' Rourke in the Mardyke (all donations €20 or over to be entered into a draw)</li>
+        <li> A certain Cobh resident (who is very "Keane") to accompany yourself and two others to the first Cork City Home fixture.
+        </li>
+    </ul>
+    
+    
+</header>
+    
+
+        
+
+            <form id = "allForm">
+                <div id = "buyerDetails">
+                  <fieldset>
+                    <legend> Buyer Details</legend>
+                    <p id = "panel1">
+                        <label for="firstName"> First Name:</label><input type="text"name="firstName" id="firstName" onchange = "firstNameValidator()" size="20" min = "2" required></p> <!-- required forces data entry -->
+                      <p id = "boogie"><label for="secondName"> Second Name:</label><input type="text" name="secondNameX" id="secondNameX" onchange = "secondNameValidatorChanger()"  size="20" required></p>
+                    <p><label for="secondName"> Second Name:</label><input type="text" name="secondName" id="secondName" onchange = "secondNameValidatorChanger()"  size="20" required></p>
+                    <p><label for="email"> Email Address:</label><input type="email" name="email" id="email" onchange = "emailValidator()" size="20" required></p>
+                    <p><label for="creditCardNumber"> Credit Card Number:</label><input type="text" name="creditCardNumber" id="creditCardNumber" size="20" onchange="creditCardCheck(this.value)" required>
+                    <label for="amount"> Amount (€Euros):</label><input type="number" name="amount" id="amount" size="20" onchange = "moneyValidatorAmount()" required></p>
+                   
+                    <p><label for="datePurchased"> Date Purchased: </label><input type="date" name="datePurchased" id="datePurchased" onchange="dateValidator()" size="23" required></p>
+                   
+                    <p><input type="checkbox" name="sameName" value="sameName" onclick = "sameNameChecked()">Same as above<br></p>
+                    <p><label for="firstName2"> Recipient First Name:</label><input type="text" name="firstName2" id="firstName2" size="20" required></p>
+                    <p><label for="secondName2"> Recipient Second Name:</label><input type="text" name="secondName2" id="secondName2" size="20" required></p>
+                </fieldset> 
+                </div>
+                
+                
+                <!-- This is the div where the output will be shown. It will be inititally hidden. -->
+                <div id = "oldManGloom"> 
+                    <div id = "treeOne"> <!-- Divs that hold the particular tree images --> 
+                        <h1> Tree Name</h1>
+                        <p id = "treeNameGiftOne"> </p>
+                    </div>
+                    <div id = "treeTwo">
+                        <h1> Tree Name</h1>
+                        <p id = "treeNameGiftTwo"> </p>
+                    </div>
+                    <div id = "treeThree">
+                        <h1> Tree Name</h1>
+                        <p id = "treeNameGiftThree"> </p>
+                    </div>
+                <p> <label for = "amountPledged"> 9 A generous donation to various Cork Charities <br>has been made on your behalf 2</label> </p>
+                <p> <label for = "sender"> 78 From: </label> </p>
+                <p id = "senderField"> </p>
+                <p> <label for = "receiver"> 873 To: </label> </p>
+                <p id = "receiverField"> </p>
+                <p> <label for = "message"> 4554 Message: </label> </p>
+                <p id = "messageField"> </p>
+                <p> <label for = "giftsRec"> 4554 Gifts Received: </label> </p>
+                <p id = "giftsField"> </p>
+                    <fieldset>
+                    <legend> Click to send</legend>
+                        <button id =sendGift >Click to send <br> Gift</button> 
+                    </fieldset>
+                </div>
+                
+                <!-- Back to the workhorse -->
+                
+                <div  id = "treeSection">
+                    <fieldset >
+                        <legend>Tree Details</legend>
+                      
+                      <p><label for="treeName"> Name of Tree:</label><input type="text" name="treeName" id="treeName"  size="20" required></p>  
+                          <p id = "treeDetails">
+                              
+                    <label>Tree  Design Type :</label><br>
+                        <input type="radio" name = "treeType" value="A" > Type A
+                        <input type="radio" name = "treeType" value="B" > Type B 
+                        <input type="radio" name = "treeType" value="C" > Type C<br> 
+                        <img id = "tree1" src = "img/tree1.JPG" alt = "tree 1" > 
+                        <img id = "tree2" src = "img/tree2.JPG" alt = "tree 2" > 
+                        <img id = "tree3" src = "img/tree3.JPG" alt = "tree 3" > <br>
+                         <button id =selectTreeType >Click to make <br> Selection</button>     
+                </p>
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <legend> Personalized Message</legend>
+                    <p><label for="message"> Type your message to gift recipient (max. 300 characters):</label><br>
+                        <textarea rows = "3" cols = "40"  maxlength = "300" id = "personalMessage"> </textarea></p>
+                
+                
+                </fieldset> 
+                <fieldset>
+                <button id =submitForm >Submit <br> Details</button>
+                <button id =resetForm onclick="resetFormAll()">Reset <br> Form</button>  
+                </fieldset>
+                <script><!-- Function cannot seem to work from code.js -->
+                    
+                    
+                    
+                    $(document).ready(function(){ 
+                            $("#treeName").click(function(){
+                                $("#treeDetails").slideDown();
+                                $("#tree1").slideUp(300).delay(200).fadeIn(400);
+                                $("#tree2").slideUp(300).delay(1000).fadeIn(400);
+                                $("#tree3").slideUp(300).delay(1800).fadeIn(400);
+                                //$("#oldManGloom").slideUp(300).delay(1900).fadeIn(400);
+                                        
+                                                                    });
+                                               
+                        
+                    
+                            $("#submitForm").click(function(){
+                                var tree_selected = $("input[name=treeType]:checked").val();
+                                submitFormEnd(tree_selected);
+                                // Switch to determine what tree image will be shown                                 
+                                switch (tree_selected){
+                                    case "A":
+                                        $("#treeOne").show();
+                                        break;
+                                    case "B":
+                                         $("#treeTwo").show();
+                                        break;
+                                    case "C":
+                                         $("#treeThree").show();
+                                        break;                                        
+                                }
+                                      //  document.getElementById("amountPaid").innerHTML = document.getElementById("amount").value;
+                                        document.getElementById("senderField").innerHTML = document.getElementById("firstName").value ;
+                                        document.getElementById("receiverField").innerHTML = document.getElementById("firstName2").value ;
+                                        document.getElementById("messageField").innerHTML = document.getElementById("personalMessage").value ;
+                                        document.getElementById("treeNameGiftOne").innerHTML = document.getElementById("treeName").value; 
+                                        document.getElementById("treeNameGiftTwo").innerHTML = document.getElementById("treeName").value; 
+                                        document.getElementById("treeNameGiftThree").innerHTML = document.getElementById("treeName").value; 
+                                $("#oldManGloom").slideUp(300).delay(1900).fadeIn(400);
+                                        
+                                                });
+                                      
+                    
+              
+                            $("#selectTreeType").click(function() {
+                                alert("In the selectTreeType function");
+                                var tree_selected = $("input[name=treeType]:checked").val();
+                             
+                                  switch (tree_selected)
+                                {
+                            case "A":
+                                $("#tree2").fadeOut(1200);
+                                $("#tree3").fadeOut(2400);
+                                $("#tree1").animate({opacity: '1.5'});
+                                break;
+                            case "B":
+                                $("#tree1").fadeOut(1200);
+                                $("#tree3").fadeOut(2400);
+                               $("#tree2").animate({opacity: '1.5'});
+                                break; 
+                           case "C":
+                                $("#tree1").fadeOut(1200);
+                                $("#tree2").fadeOut(2400);
+                                $("#tree3").animate({opacity: '1.5'});
+                                break;                                         
+                                        
+                                }
+                               
+                                
+                               
+                                
+                            });
+                    
+                        
+                         $("#sendGift").click(function() {
+                                
+                            $("#oldManGloom").hide(); 
+                             
+                               
+                                
+                            });
+                    
+                          }); 
+                    
+            </script>
+            </form>
+        <footer>
+        <img id = "footerImg" src="img/merry-christmas_poster02.png" alt="Merry Christmas Poster" height="230" width="500">
+        </footer>
+   </div> 
+</div>
+</body>
+
+</html> 
+
+
